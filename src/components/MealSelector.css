@@ -1,0 +1,172 @@
+.meal-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.meal-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  min-width: 80px;
+}
+
+.meal-dropdown-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  text-align: left;
+}
+
+.meal-dropdown-button:hover {
+  background: #efefef;
+  border-color: #ddd;
+}
+
+.meal-dropdown-button:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.meal-name {
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meal-dropdown-button:not(:has(.meal-name)) .meal-name,
+.meal-name:empty::after {
+  color: #999;
+}
+
+.chevron {
+  transition: transform 0.2s;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.meal-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 92px;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+  animation: dropdownSlide 0.15s ease-out;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.meal-dropdown-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.2s;
+  gap: 12px;
+}
+
+.meal-dropdown-item:hover {
+  background: #f8f8f8;
+}
+
+.meal-dropdown-item.selected {
+  background: #f0f4ff;
+  color: #667eea;
+}
+
+.meal-dropdown-item.clear {
+  color: #d32f2f;
+}
+
+.meal-dropdown-item.clear:hover {
+  background: #ffebee;
+}
+
+.item-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-calories {
+  color: #666;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: #e8e8e8;
+  margin: 4px 0;
+}
+
+.empty-dropdown {
+  padding: 20px 12px;
+  text-align: center;
+}
+
+.empty-dropdown p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.empty-hint {
+  margin-top: 4px !important;
+  font-size: 12px !important;
+  color: #999 !important;
+}
+
+@media (max-width: 768px) {
+  .meal-label {
+    min-width: 70px;
+    font-size: 13px;
+  }
+
+  .meal-dropdown-button {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  .meal-dropdown-menu {
+    left: 82px;
+  }
+}

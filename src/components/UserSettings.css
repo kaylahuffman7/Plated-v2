@@ -1,0 +1,105 @@
+.settings-modal {
+  max-width: 500px;
+}
+
+.settings-section {
+  margin-bottom: 32px;
+}
+
+.settings-section:last-of-type {
+  margin-bottom: 24px;
+}
+
+.settings-section h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.section-description {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.section-hint {
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  color: #999;
+  line-height: 1.4;
+}
+
+.meal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.meal-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 12px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.meal-option:hover {
+  background: #f0f0f0;
+}
+
+.meal-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.meal-option-label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.toggle-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 12px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.toggle-option:hover {
+  background: #f0f0f0;
+}
+
+.toggle-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.toggle-label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .settings-section {
+    margin-bottom: 24px;
+  }
+
+  .meal-option,
+  .toggle-option {
+    padding: 10px;
+  }
+}

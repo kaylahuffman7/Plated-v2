@@ -1,0 +1,60 @@
+.macros-summary {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  margin-bottom: 16px;
+}
+
+.macros-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.macros-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.macro-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 16px 12px;
+  text-align: center;
+  color: white;
+}
+
+.macro-value {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.macro-label {
+  font-size: 12px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .macros-summary {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .macros-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .macro-value {
+    font-size: 20px;
+  }
+
+  .macro-label {
+    font-size: 11px;
+  }
+}

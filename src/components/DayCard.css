@@ -1,0 +1,100 @@
+.day-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.day-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+.day-macros {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.macro-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.macro-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.macro-label {
+  font-size: 10px !important;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.macro-value {
+  font-size: 11px !important;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.macro-progress {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.macro-progress-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.meals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .day-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .day-title {
+    font-size: 18px;
+  }
+
+  .day-macros {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .macro-label {
+    font-size: 8px;
+  }
+
+  .macro-value {
+    font-size: 9px;
+  }
+
+  .macro-progress {
+    height: 6px;
+  }
+}
