@@ -123,18 +123,6 @@ function MealSelector({
 
       {isOpen && (
         <div className="meal-dropdown-menu">
-          {selectedMeal && (
-            <>
-              <button
-                className="meal-dropdown-item clear"
-                onClick={() => handleSelectMeal(null)}
-              >
-                Clear selection
-              </button>
-              <div className="dropdown-divider"></div>
-            </>
-          )}
-          
           {filteredMeals.length === 0 ? (
             <div className="empty-dropdown">
               <p>No {formatMealType(mealType).toLowerCase()} meals</p>

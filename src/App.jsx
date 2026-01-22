@@ -440,7 +440,7 @@ function AppContent() {
     return (
       <div className="auth-container">
         <div className="auth-card">
-          <h1>Plated</h1>
+          <img src="/plated-logo.svg" alt="Plated" style={{ height: '48px', width: 'auto', marginBottom: '16px' }} />
           <p>Your personal meal planning assistant</p>
           
           <div style={{ marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>

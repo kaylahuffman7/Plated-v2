@@ -22,6 +22,12 @@
   margin: 0;
 }
 
+.header-logo {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -152,5 +158,9 @@
 
   .header-title {
     font-size: 24px;
+  }
+
+  .header-logo {
+    height: 28px;
   }
 }
